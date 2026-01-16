@@ -48,7 +48,29 @@ Set `SKIP_URL_VALIDATION=1` to bypass URL checks during local development.
 
 ## Updating Agent Versions
 
-To update agents to their latest versions:
+### Automated Updates
+
+Agent versions are automatically updated via `.github/workflows/update-versions.yml`:
+- **Schedule:** Runs hourly (cron: `0 * * * *`)
+- **Scope:** Checks all agents in root and `_not_yet_unsupported/`
+- **Supported distributions:** `npx` (npm), `uvx` (PyPI), `binary` (GitHub releases)
+
+```bash
+# Dry run - check for available updates
+uv run .github/workflows/update_versions.py
+
+# Apply updates locally
+uv run .github/workflows/update_versions.py --apply
+
+# Check specific agents only
+uv run .github/workflows/update_versions.py --agents gemini,github-copilot
+```
+
+The workflow can also be triggered manually via GitHub Actions with options to apply updates and filter by agent IDs.
+
+### Manual Updates
+
+To update agents manually:
 
 1. **For npm packages** (`npx` distribution): Check latest version at `https://registry.npmjs.org/<package>/latest`
 2. **For GitHub binaries** (`binary` distribution): Check latest release at `https://api.github.com/repos/<owner>/<repo>/releases/latest`
