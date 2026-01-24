@@ -113,12 +113,12 @@ Using `currentColor` enables icons to adapt to different themes (light/dark mode
 
 ## Documentation Site
 
-The registry has a documentation site built with [Mintlify](https://mintlify.com/) in the `docs/` folder.
+The registry has a documentation site built with [Mintlify](https://mintlify.com/) in the `.docs/` folder.
 
 ### Structure
 
 ```
-docs/
+.docs/
 ├── docs.json          # Mintlify configuration
 ├── _index.mdx         # Template for index page (contains $$AGENTS_CARDS$$ placeholder)
 ├── index.mdx          # Generated index page with agent cards
@@ -148,9 +148,9 @@ cd docs && npx mintlify dev --port 3000
 
 Docs are automatically regenerated when agent versions are updated:
 - The `update-versions.yml` workflow runs `generate_mintlify_agents.py` after applying updates
-- Changes to `docs/index.mdx` are committed along with version updates
+- Changes to `.docs/index.mdx` are committed along with version updates
 
 ### Adding New Pages
 
-1. Create new `.mdx` file in `docs/`
+1. Create new `.mdx` file in `.docs/`
 2. Add the page name (without extension) to `docs.json` navigation

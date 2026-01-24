@@ -33,7 +33,7 @@ Generate the agents list and run the local docs server:
 
 ```bash
 uv run .github/workflows/generate_mintlify_agents.py
-cd docs && npx mintlify dev --port 3000
+cd .docs && npx mintlify dev --port 3000
 ```
 
 ## Registry Format

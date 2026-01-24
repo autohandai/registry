@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-DOCS_DIR = ROOT / "docs"
+DOCS_DIR = ROOT / ".docs"
 TEMPLATE_PATH = DOCS_DIR / "_index.mdx"
 OUTPUT_PATH = DOCS_DIR / "index.mdx"
 PLACEHOLDER = "$$AGENTS_CARDS$$"
