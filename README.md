@@ -9,8 +9,9 @@ A registry of agents and extensions implementing the [Agent Client Protocol, ACP
 ## Included Agents
 
 | Agent                                                                       | Description                                                                       |
-|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | [Auggie CLI](https://github.com/augmentcode/auggie-zed-extension)           | Augment Code's powerful software agent, backed by industry-leading context engine |
+| [Claude Code](https://github.com/zed-industries/claude-code-acp)            | ACP adapter for Claude Code                                                       |
 | [Codex CLI](https://github.com/zed-industries/codex-acp)                    | ACP adapter for OpenAI's coding assistant                                         |
 | Factory Droid                                                               | Factory Droid - AI coding agent powered by Factory AI                             |
 | [Gemini CLI](https://github.com/google-gemini/gemini-cli)                   | Google's official CLI for Gemini                                                  |
